@@ -1,5 +1,5 @@
 //
-//  RecipeType.swift
+//  Recipe.swift
 //  BillyRecipeApp
 //
 //  Created by Billy on 02/08/2019.
@@ -11,4 +11,12 @@ import Foundation
 struct RecipeType {
     var id: Int
     var name: String
+}
+
+struct Recipe {
+    var id: String
+    var name: String
+    var imageURL: String
+    var steps: String
+    var prepTime: String
 }

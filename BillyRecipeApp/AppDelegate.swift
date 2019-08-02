@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let localDB = LocalDB()
+        localDB.setup()
+        
+        if localDB.showRecipeTypes().count > 0 {
+            if UserDefaults.standard.object(forKey: "selectedRecipeTypeID") != nil {
+                let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+                let homeVC = mainStoryBoard.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+                let navigationController = UINavigationController(rootViewController: homeVC)
+                self.window?.rootViewController = navigationController
+            }
+        }
+        
         return true
     }
 
