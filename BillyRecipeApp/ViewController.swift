@@ -48,9 +48,19 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(currentSelectedRecipeTypeID, forKey: "selectedRecipeTypeID")
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let homeVC = mainStoryBoard.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+        homeVC.selectedRecipeTypeID = currentSelectedRecipeTypeID
         let navigationController = UINavigationController(rootViewController: homeVC)
+        navigationController.navigationBar.prefersLargeTitles = true
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = navigationController
+        if let window = appDelegate.window {
+            UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                window.rootViewController = navigationController
+            }, completion: { completed in
+                // maybe do something here
+            })
+        }
+        
+        
     }
 }
 

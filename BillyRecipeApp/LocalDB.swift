@@ -69,4 +69,18 @@ class LocalDB {
             return recipeTypeArr
         }
     }
+    
+    func getRecipeType(recipeTypeID: Int64) -> RecipeType? {
+        do {
+            var recipeType: RecipeType? = nil
+            let recipeTypeTable = recipeTypes.filter(id == recipeTypeID)
+            
+            for rt in try (db?.prepare(recipeTypeTable))! {
+                recipeType = RecipeType(id: Int(rt[id]), name: rt[name])
+            }
+            return recipeType
+        } catch {
+            return nil
+        }
+    }
 }

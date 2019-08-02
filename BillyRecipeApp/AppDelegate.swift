@@ -24,7 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if UserDefaults.standard.object(forKey: "selectedRecipeTypeID") != nil {
                 let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
                 let homeVC = mainStoryBoard.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+                homeVC.selectedRecipeTypeID = UserDefaults.standard.integer(forKey: "selectedRecipeTypeID")
                 let navigationController = UINavigationController(rootViewController: homeVC)
+                navigationController.navigationBar.prefersLargeTitles = true
                 self.window?.rootViewController = navigationController
             }
         }

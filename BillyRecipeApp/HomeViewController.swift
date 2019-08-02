@@ -10,21 +10,18 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    var selectedRecipeTypeID: Int = 0
+    var recipeType: RecipeType? = nil
+    let localDB = LocalDB()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        recipeType = localDB.getRecipeType(recipeTypeID: Int64(selectedRecipeTypeID))
+        if let rt = recipeType {
+            self.navigationItem.title = rt.name
+        }
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
