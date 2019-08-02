@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2877DA0322F46C140026AA4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA0222F46C140026AA4E /* AppDelegate.swift */; };
+		2877DA0522F46C140026AA4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA0422F46C140026AA4E /* ViewController.swift */; };
+		2877DA0822F46C140026AA4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2877DA0622F46C140026AA4E /* Main.storyboard */; };
+		2877DA0A22F46C140026AA4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2877DA0922F46C140026AA4E /* Assets.xcassets */; };
+		2877DA0D22F46C140026AA4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2877DA0B22F46C140026AA4E /* LaunchScreen.storyboard */; };
+		2877DA1822F46C150026AA4E /* BillyRecipeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA1722F46C150026AA4E /* BillyRecipeAppTests.swift */; };
+		2877DA2322F46C150026AA4E /* BillyRecipeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA2222F46C150026AA4E /* BillyRecipeAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2877DA1422F46C150026AA4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2877D9F722F46C140026AA4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2877D9FE22F46C140026AA4E;
+			remoteInfo = BillyRecipeApp;
+		};
+		2877DA1F22F46C150026AA4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2877D9F722F46C140026AA4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2877D9FE22F46C140026AA4E;
+			remoteInfo = BillyRecipeApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2877D9FF22F46C140026AA4E /* BillyRecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillyRecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2877DA0222F46C140026AA4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2877DA0422F46C140026AA4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2877DA0722F46C140026AA4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2877DA0922F46C140026AA4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2877DA0C22F46C140026AA4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2877DA0E22F46C140026AA4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2877DA1322F46C150026AA4E /* BillyRecipeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillyRecipeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2877DA1722F46C150026AA4E /* BillyRecipeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillyRecipeAppTests.swift; sourceTree = "<group>"; };
+		2877DA1922F46C150026AA4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2877DA1E22F46C150026AA4E /* BillyRecipeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillyRecipeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2877DA2222F46C150026AA4E /* BillyRecipeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillyRecipeAppUITests.swift; sourceTree = "<group>"; };
+		2877DA2422F46C150026AA4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2877D9FC22F46C140026AA4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2877DA1022F46C150026AA4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2877DA1B22F46C150026AA4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2877D9F622F46C140026AA4E = {
+			isa = PBXGroup;
+			children = (
+				2877DA0122F46C140026AA4E /* BillyRecipeApp */,
+				2877DA1622F46C150026AA4E /* BillyRecipeAppTests */,
+				2877DA2122F46C150026AA4E /* BillyRecipeAppUITests */,
+				2877DA0022F46C140026AA4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2877DA0022F46C140026AA4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2877D9FF22F46C140026AA4E /* BillyRecipeApp.app */,
+				2877DA1322F46C150026AA4E /* BillyRecipeAppTests.xctest */,
+				2877DA1E22F46C150026AA4E /* BillyRecipeAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2877DA0122F46C140026AA4E /* BillyRecipeApp */ = {
+			isa = PBXGroup;
+			children = (
+				2877DA0222F46C140026AA4E /* AppDelegate.swift */,
+				2877DA0422F46C140026AA4E /* ViewController.swift */,
+				2877DA0622F46C140026AA4E /* Main.storyboard */,
+				2877DA0922F46C140026AA4E /* Assets.xcassets */,
+				2877DA0B22F46C140026AA4E /* LaunchScreen.storyboard */,
+				2877DA0E22F46C140026AA4E /* Info.plist */,
+			);
+			path = BillyRecipeApp;
+			sourceTree = "<group>";
+		};
+		2877DA1622F46C150026AA4E /* BillyRecipeAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2877DA1722F46C150026AA4E /* BillyRecipeAppTests.swift */,
+				2877DA1922F46C150026AA4E /* Info.plist */,
+			);
+			path = BillyRecipeAppTests;
+			sourceTree = "<group>";
+		};
+		2877DA2122F46C150026AA4E /* BillyRecipeAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2877DA2222F46C150026AA4E /* BillyRecipeAppUITests.swift */,
+				2877DA2422F46C150026AA4E /* Info.plist */,
+			);
+			path = BillyRecipeAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2877D9FE22F46C140026AA4E /* BillyRecipeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2877DA2722F46C150026AA4E /* Build configuration list for PBXNativeTarget "BillyRecipeApp" */;
+			buildPhases = (
+				2877D9FB22F46C140026AA4E /* Sources */,
+				2877D9FC22F46C140026AA4E /* Frameworks */,
+				2877D9FD22F46C140026AA4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BillyRecipeApp;
+			productName = BillyRecipeApp;
+			productReference = 2877D9FF22F46C140026AA4E /* BillyRecipeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2877DA1222F46C150026AA4E /* BillyRecipeAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2877DA2A22F46C150026AA4E /* Build configuration list for PBXNativeTarget "BillyRecipeAppTests" */;
+			buildPhases = (
+				2877DA0F22F46C150026AA4E /* Sources */,
+				2877DA1022F46C150026AA4E /* Frameworks */,
+				2877DA1122F46C150026AA4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2877DA1522F46C150026AA4E /* PBXTargetDependency */,
+			);
+			name = BillyRecipeAppTests;
+			productName = BillyRecipeAppTests;
+			productReference = 2877DA1322F46C150026AA4E /* BillyRecipeAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2877DA1D22F46C150026AA4E /* BillyRecipeAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2877DA2D22F46C150026AA4E /* Build configuration list for PBXNativeTarget "BillyRecipeAppUITests" */;
+			buildPhases = (
+				2877DA1A22F46C150026AA4E /* Sources */,
+				2877DA1B22F46C150026AA4E /* Frameworks */,
+				2877DA1C22F46C150026AA4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2877DA2022F46C150026AA4E /* PBXTargetDependency */,
+			);
+			name = BillyRecipeAppUITests;
+			productName = BillyRecipeAppUITests;
+			productReference = 2877DA1E22F46C150026AA4E /* BillyRecipeAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2877D9F722F46C140026AA4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = BillyGDev;
+				TargetAttributes = {
+					2877D9FE22F46C140026AA4E = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					2877DA1222F46C150026AA4E = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 2877D9FE22F46C140026AA4E;
+					};
+					2877DA1D22F46C150026AA4E = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 2877D9FE22F46C140026AA4E;
+					};
+				};
+			};
+			buildConfigurationList = 2877D9FA22F46C140026AA4E /* Build configuration list for PBXProject "BillyRecipeApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2877D9F622F46C140026AA4E;
+			productRefGroup = 2877DA0022F46C140026AA4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2877D9FE22F46C140026AA4E /* BillyRecipeApp */,
+				2877DA1222F46C150026AA4E /* BillyRecipeAppTests */,
+				2877DA1D22F46C150026AA4E /* BillyRecipeAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2877D9FD22F46C140026AA4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2877DA0D22F46C140026AA4E /* LaunchScreen.storyboard in Resources */,
+				2877DA0A22F46C140026AA4E /* Assets.xcassets in Resources */,
+				2877DA0822F46C140026AA4E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2877DA1122F46C150026AA4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2877DA1C22F46C150026AA4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2877D9FB22F46C140026AA4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2877DA0522F46C140026AA4E /* ViewController.swift in Sources */,
+				2877DA0322F46C140026AA4E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2877DA0F22F46C150026AA4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2877DA1822F46C150026AA4E /* BillyRecipeAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2877DA1A22F46C150026AA4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2877DA2322F46C150026AA4E /* BillyRecipeAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2877DA1522F46C150026AA4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2877D9FE22F46C140026AA4E /* BillyRecipeApp */;
+			targetProxy = 2877DA1422F46C150026AA4E /* PBXContainerItemProxy */;
+		};
+		2877DA2022F46C150026AA4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2877D9FE22F46C140026AA4E /* BillyRecipeApp */;
+			targetProxy = 2877DA1F22F46C150026AA4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2877DA0622F46C140026AA4E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2877DA0722F46C140026AA4E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2877DA0B22F46C140026AA4E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2877DA0C22F46C140026AA4E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2877DA2522F46C150026AA4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2877DA2622F46C150026AA4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2877DA2822F46C150026AA4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6QL3YZ3ZT;
+				INFOPLIST_FILE = BillyRecipeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.billygdev.BillyRecipeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2877DA2922F46C150026AA4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6QL3YZ3ZT;
+				INFOPLIST_FILE = BillyRecipeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.billygdev.BillyRecipeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2877DA2B22F46C150026AA4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6QL3YZ3ZT;
+				INFOPLIST_FILE = BillyRecipeAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.billygdev.BillyRecipeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BillyRecipeApp.app/BillyRecipeApp";
+			};
+			name = Debug;
+		};
+		2877DA2C22F46C150026AA4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6QL3YZ3ZT;
+				INFOPLIST_FILE = BillyRecipeAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.billygdev.BillyRecipeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BillyRecipeApp.app/BillyRecipeApp";
+			};
+			name = Release;
+		};
+		2877DA2E22F46C150026AA4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6QL3YZ3ZT;
+				INFOPLIST_FILE = BillyRecipeAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.billygdev.BillyRecipeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BillyRecipeApp;
+			};
+			name = Debug;
+		};
+		2877DA2F22F46C150026AA4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6QL3YZ3ZT;
+				INFOPLIST_FILE = BillyRecipeAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.billygdev.BillyRecipeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BillyRecipeApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2877D9FA22F46C140026AA4E /* Build configuration list for PBXProject "BillyRecipeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2877DA2522F46C150026AA4E /* Debug */,
+				2877DA2622F46C150026AA4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2877DA2722F46C150026AA4E /* Build configuration list for PBXNativeTarget "BillyRecipeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2877DA2822F46C150026AA4E /* Debug */,
+				2877DA2922F46C150026AA4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2877DA2A22F46C150026AA4E /* Build configuration list for PBXNativeTarget "BillyRecipeAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2877DA2B22F46C150026AA4E /* Debug */,
+				2877DA2C22F46C150026AA4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2877DA2D22F46C150026AA4E /* Build configuration list for PBXNativeTarget "BillyRecipeAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2877DA2E22F46C150026AA4E /* Debug */,
+				2877DA2F22F46C150026AA4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2877D9F722F46C140026AA4E /* Project object */;
+}
