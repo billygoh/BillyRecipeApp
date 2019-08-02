@@ -11,13 +11,14 @@ import SQLite
 
 class LocalDB {
     let db = try? Connection("\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/recipedb.sqlite3")
-    let recipeTypes = Table("recipe_types")
-    let recipe = Table("recipe")
+    let recipeTypesTable = Table("recipe_types")
+    let recipeTable = Table("recipe")
     
     let id = Expression<Int64>("id")
     let name = Expression<String>("name")
     
     let recipeId = Expression<Int64>("id")
+    let recipeTypeId = Expression<Int64>("recipeTypeId")
     let recipeName = Expression<String>("name")
     let recipeImgURL = Expression<String>("imageURL")
     let recipeSteps = Expression<String>("steps")
@@ -26,14 +27,15 @@ class LocalDB {
     func setup() {
         do {
             //Create Recipe Types Table
-            try db?.run(recipeTypes.create(ifNotExists: true) { t in
+            try db?.run(recipeTypesTable.create(ifNotExists: true) { t in
                 t.column(id, primaryKey: true)
                 t.column(name)
             })
             
             //Create Recipe Table
-            try db?.run(recipe.create(ifNotExists: true) { t in
+            try db?.run(recipeTable.create(ifNotExists: true) { t in
                 t.column(recipeId, primaryKey: true)
+                t.column(recipeTypeId)
                 t.column(recipeName)
                 t.column(recipeImgURL)
                 t.column(recipeSteps)
@@ -49,9 +51,9 @@ class LocalDB {
     
     func populateRecipeTypes(recipeTypeNameArr: [String]) {
         do {
-            try db?.run(recipeTypes.delete())
+            try db?.run(recipeTypesTable.delete())
             for type in recipeTypeNameArr {
-                try db?.run(recipeTypes.insert(name <- type))
+                try db?.run(recipeTypesTable.insert(name <- type))
             }
         } catch {
             
@@ -61,7 +63,7 @@ class LocalDB {
     func showRecipeTypes() -> [RecipeType] {
         var recipeTypeArr = [RecipeType]()
         do {
-            for rt in try (db?.prepare(recipeTypes))! {
+            for rt in try (db?.prepare(recipeTypesTable))! {
                 recipeTypeArr += [RecipeType(id: Int(rt[id]), name: rt[name])]
             }
             return recipeTypeArr
@@ -73,7 +75,7 @@ class LocalDB {
     func getRecipeType(recipeTypeID: Int64) -> RecipeType? {
         do {
             var recipeType: RecipeType? = nil
-            let recipeTypeTable = recipeTypes.filter(id == recipeTypeID)
+            let recipeTypeTable = recipeTypesTable.filter(id == recipeTypeID)
             
             for rt in try (db?.prepare(recipeTypeTable))! {
                 recipeType = RecipeType(id: Int(rt[id]), name: rt[name])
@@ -81,6 +83,34 @@ class LocalDB {
             return recipeType
         } catch {
             return nil
+        }
+    }
+    
+    func addRecipe(recipeArr: [Recipe], recipeTypeID: Int64) -> Bool {
+        do {
+            if recipeArr.count > 0 {
+                for recipe in recipeArr {
+                    try db?.run(recipeTable.insert(recipeTypeId <- recipeTypeID, recipeName <- recipe.name, recipeImgURL <- recipe.imageURL, recipeSteps <- recipe.steps, recipePrepTime <- recipe.prepTime))
+                }
+                return true
+            }
+            return false
+        } catch {
+            return false
+        }
+    }
+    
+    func getRecipeList(recipeTypeID: Int64) -> [Recipe] {
+        var recipeArr = [Recipe]()
+        do {
+            let recipeFilteredTable = recipeTable.filter(recipeTypeId == recipeTypeID)
+            for r in try (db?.prepare(recipeFilteredTable))! {
+                recipeArr += [Recipe(id: Int(r[recipeId]), name: r[recipeName], imageURL: r[recipeImgURL], steps: r[recipeSteps], prepTime: r[recipePrepTime])]
+            }
+            
+            return recipeArr
+        } catch {
+            return recipeArr
         }
     }
 }

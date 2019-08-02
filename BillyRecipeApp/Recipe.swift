@@ -14,7 +14,7 @@ struct RecipeType {
 }
 
 struct Recipe {
-    var id: String
+    var id: Int
     var name: String
     var imageURL: String
     var steps: String

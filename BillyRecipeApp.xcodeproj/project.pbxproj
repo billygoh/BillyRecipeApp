@@ -20,6 +20,12 @@
 		2877DA5422F477D80026AA4E /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2877DA4522F477A70026AA4E /* SQLite.framework */; };
 		2877DA5622F477FB0026AA4E /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2877DA4522F477A70026AA4E /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2877DA5B22F478C60026AA4E /* LocalDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA5A22F478C60026AA4E /* LocalDB.swift */; };
+		2877DA5D22F49C560026AA4E /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA5C22F49C560026AA4E /* RecipeCollectionViewCell.swift */; };
+		2877DA5F22F4AA7B0026AA4E /* filter.png in Resources */ = {isa = PBXBuildFile; fileRef = 2877DA5E22F4AA7B0026AA4E /* filter.png */; };
+		2877DA6122F4AA7F0026AA4E /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 2877DA6022F4AA7F0026AA4E /* add.png */; };
+		2877DA6322F4AF8D0026AA4E /* AddUpdateRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA6222F4AF8D0026AA4E /* AddUpdateRecipeViewController.swift */; };
+		2877DA6522F4B57B0026AA4E /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2877DA6422F4B57B0026AA4E /* image.png */; };
+		2877DA6722F4BBD90026AA4E /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 2877DA6622F4BBD90026AA4E /* ok.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +134,12 @@
 		2877DA3822F4738C0026AA4E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2877DA3A22F477A70026AA4E /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Desktop/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		2877DA5A22F478C60026AA4E /* LocalDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDB.swift; sourceTree = "<group>"; };
+		2877DA5C22F49C560026AA4E /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		2877DA5E22F4AA7B0026AA4E /* filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filter.png; sourceTree = "<group>"; };
+		2877DA6022F4AA7F0026AA4E /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		2877DA6222F4AF8D0026AA4E /* AddUpdateRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateRecipeViewController.swift; sourceTree = "<group>"; };
+		2877DA6422F4B57B0026AA4E /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		2877DA6622F4BBD90026AA4E /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +198,8 @@
 				2877DA0222F46C140026AA4E /* AppDelegate.swift */,
 				2877DA0422F46C140026AA4E /* ViewController.swift */,
 				2877DA3822F4738C0026AA4E /* HomeViewController.swift */,
+				2877DA5C22F49C560026AA4E /* RecipeCollectionViewCell.swift */,
+				2877DA6222F4AF8D0026AA4E /* AddUpdateRecipeViewController.swift */,
 				2877DA3622F471510026AA4E /* Recipe.swift */,
 				2877DA5A22F478C60026AA4E /* LocalDB.swift */,
 				2877DA0622F46C140026AA4E /* Main.storyboard */,
@@ -225,6 +239,10 @@
 		2877DA3322F46DA50026AA4E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2877DA5E22F4AA7B0026AA4E /* filter.png */,
+				2877DA6022F4AA7F0026AA4E /* add.png */,
+				2877DA6422F4B57B0026AA4E /* image.png */,
+				2877DA6622F4BBD90026AA4E /* ok.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -416,6 +434,10 @@
 			files = (
 				2877DA0D22F46C140026AA4E /* LaunchScreen.storyboard in Resources */,
 				2877DA0A22F46C140026AA4E /* Assets.xcassets in Resources */,
+				2877DA5F22F4AA7B0026AA4E /* filter.png in Resources */,
+				2877DA6722F4BBD90026AA4E /* ok.png in Resources */,
+				2877DA6122F4AA7F0026AA4E /* add.png in Resources */,
+				2877DA6522F4B57B0026AA4E /* image.png in Resources */,
 				2877DA0822F46C140026AA4E /* Main.storyboard in Resources */,
 				2877DA3522F470CD0026AA4E /* recipetypes.xml in Resources */,
 			);
@@ -442,7 +464,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2877DA5D22F49C560026AA4E /* RecipeCollectionViewCell.swift in Sources */,
 				2877DA5B22F478C60026AA4E /* LocalDB.swift in Sources */,
+				2877DA6322F4AF8D0026AA4E /* AddUpdateRecipeViewController.swift in Sources */,
 				2877DA0522F46C140026AA4E /* ViewController.swift in Sources */,
 				2877DA0322F46C140026AA4E /* AppDelegate.swift in Sources */,
 				2877DA3722F471510026AA4E /* Recipe.swift in Sources */,
@@ -630,6 +654,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6QL3YZ3ZT;
 				INFOPLIST_FILE = BillyRecipeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -649,6 +674,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6QL3YZ3ZT;
 				INFOPLIST_FILE = BillyRecipeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

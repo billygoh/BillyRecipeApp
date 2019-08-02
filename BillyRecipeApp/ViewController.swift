@@ -45,22 +45,51 @@ class ViewController: UIViewController {
     }
     
     @IBAction func selectBtnClicked(_ sender: Any) {
+        for i in 1..<6 {
+            preAddData(recipeTypeID: Int64(i))
+        }
+        
         UserDefaults.standard.set(currentSelectedRecipeTypeID, forKey: "selectedRecipeTypeID")
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let homeVC = mainStoryBoard.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
         homeVC.selectedRecipeTypeID = currentSelectedRecipeTypeID
         let navigationController = UINavigationController(rootViewController: homeVC)
-        navigationController.navigationBar.prefersLargeTitles = true
+        if #available(iOS 11.0, *) {
+            navigationController.navigationBar.prefersLargeTitles = true
+        }
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         if let window = appDelegate.window {
             UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
                 window.rootViewController = navigationController
             }, completion: { completed in
-                // maybe do something here
             })
         }
-        
-        
+    }
+    
+    func preAddData(recipeTypeID: Int64) {
+        var recipeArr = [Recipe]()
+        switch recipeTypeID {
+        case 1:
+            recipeArr += [Recipe(id: 0, name: "Burrito", imageURL: "KR Img 1", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Quesaddila", imageURL: "KR Img 2", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Taco", imageURL: "KR Img 3", steps: "step 123", prepTime: "prep 123")]
+        case 2:
+            recipeArr += [Recipe(id: 0, name: "Aglio Olio", imageURL: "KR Img 1", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Pizza", imageURL: "KR Img 2", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Cabonara", imageURL: "KR Img 3", steps: "step 123", prepTime: "prep 123")]
+        case 3:
+            recipeArr += [Recipe(id: 0, name: "Sushi", imageURL: "KR Img 1", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Soba", imageURL: "KR Img 2", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Udon", imageURL: "KR Img 3", steps: "step 123", prepTime: "prep 123")]
+        case 4:
+            recipeArr += [Recipe(id: 0, name: "Kimchi", imageURL: "KR Img 1", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Korean Fried Chicken", imageURL: "KR Img 2", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Bibimbap", imageURL: "KR Img 3", steps: "step 123", prepTime: "prep 123")]
+        default:
+            return
+        }
+
+        let _ = localDB.addRecipe(recipeArr: recipeArr, recipeTypeID: recipeTypeID)
     }
 }
 
