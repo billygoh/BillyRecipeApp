@@ -149,6 +149,8 @@ class AddUpdateRecipeViewController: UIViewController {
         }))
         
         alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        alert.popoverPresentationController?.sourceView = recipeIV
+        alert.popoverPresentationController?.sourceRect = CGRect(x: recipeIV.bounds.midX, y: recipeIV.bounds.midY, width: 0, height: 0)
         self.present(alert, animated: true, completion: nil)
     }
     

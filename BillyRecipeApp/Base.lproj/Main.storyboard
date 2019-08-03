@@ -64,6 +64,13 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JSR-5D-itF">
+                                <rect key="frame" x="187" y="274" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="4bj-n5-mNg"/>
+                                    <constraint firstAttribute="height" constant="40" id="Rkq-NG-HAE"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -73,9 +80,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mVn-uI-ST5" secondAttribute="trailing" constant="20" id="T4Q-ge-dRZ"/>
                             <constraint firstItem="mVn-uI-ST5" firstAttribute="top" secondItem="xf3-KY-ER7" secondAttribute="bottom" constant="8" id="T8y-Yt-rrY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xf3-KY-ER7" secondAttribute="trailing" constant="20" id="WjW-Cn-iNz"/>
+                            <constraint firstItem="JSR-5D-itF" firstAttribute="top" secondItem="mVn-uI-ST5" secondAttribute="bottom" constant="40" id="aLI-QL-wiW"/>
                             <constraint firstItem="QiC-BK-Ifq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dEO-WL-2MH"/>
                             <constraint firstItem="QiC-BK-Ifq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="f4m-11-9zF"/>
                             <constraint firstItem="xf3-KY-ER7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gxB-FY-Jx7"/>
+                            <constraint firstItem="JSR-5D-itF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iOB-a5-7Rx"/>
                             <constraint firstItem="xf3-KY-ER7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jfj-ND-uEK"/>
                             <constraint firstItem="QiC-BK-Ifq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kbl-Dg-Hy9"/>
                             <constraint firstItem="mVn-uI-ST5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qV7-Xy-J8v"/>
@@ -83,6 +92,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loadingIndicator" destination="JSR-5D-itF" id="BEf-OO-HWf"/>
                         <outlet property="pickerViewTB" destination="TSj-sQ-7Wz" id="Nij-Uc-E6h"/>
                         <outlet property="recipeTypePV" destination="QiC-BK-Ifq" id="9au-R5-6MB"/>
                         <outlet property="selectBtn" destination="mVn-uI-ST5" id="FhN-bk-rZ8"/>
@@ -352,7 +362,8 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M3q-XA-tUj">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="M3q-XA-tUj" secondAttribute="height" multiplier="1:1" id="A4N-nt-HRX"/>
+                                                    <constraint firstAttribute="width" secondItem="M3q-XA-tUj" secondAttribute="height" multiplier="1:1" priority="750" id="A4N-nt-HRX"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="414" id="clL-PI-tg0"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xam-h0-jOa">

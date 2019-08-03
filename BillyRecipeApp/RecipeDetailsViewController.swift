@@ -59,10 +59,22 @@ class RecipeDetailsViewController: UIViewController {
         }))
         
         alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
-            
+            let success = self.localDB.removeRecipe(recipeID: Int64(self.recipeID))
+            if success {
+                let alert = UIAlertController(title: "Success", message: "Successfully removed recipe", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+                    self.navigationController?.popViewController(animated: true)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                let alert = UIAlertController(title: "Error", message: "Problem removing recipe", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
         }))
         
         alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        alert.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
         self.present(alert, animated: true, completion: nil)
     }
 }

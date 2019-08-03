@@ -43,11 +43,8 @@ class LocalDB {
                 t.column(recipeSteps)
                 t.column(recipePrepTime)
             })
-            
-            print("SUCCESS")
         } catch {
             //ERROR CREATING TABLES
-            print("FAILED")
         }
     }
     
@@ -137,6 +134,17 @@ class LocalDB {
             return recipe
         } catch {
             return nil
+        }
+    }
+    
+    func removeRecipe(recipeID: Int64) -> Bool {
+        do {
+            let recipeFilteredTable = recipeTable.filter(id == recipeID)
+            
+            try db?.run(recipeFilteredTable.delete())
+            return true
+        } catch {
+            return false
         }
     }
 }

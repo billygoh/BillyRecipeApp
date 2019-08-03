@@ -79,6 +79,13 @@ class HomeViewController: UIViewController {
         recipeTypePV.isHidden = true
         pickerViewTB.isHidden = true
         
+        if pickerSelectedRecipeTypeID == 0 {
+            let ID = localDB.showRecipeTypes()[0].id
+            let name = localDB.showRecipeTypes()[0].name
+            pickerSelectedRecipeTypeID = ID
+            pickerSelectedRecipeTypeName = name
+        }
+        
         selectedRecipeTypeID = pickerSelectedRecipeTypeID
         self.navigationItem.title = pickerSelectedRecipeTypeName
         recipeArr = localDB.getRecipeList(recipeTypeID: Int64(selectedRecipeTypeID))
