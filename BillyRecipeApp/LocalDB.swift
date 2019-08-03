@@ -102,6 +102,16 @@ class LocalDB {
         }
     }
     
+    func editRecipe(recipe: Recipe) -> Bool {
+        do {
+            let recipeFilteredTable = recipeTable.filter(id == Int64(recipe.id))
+            try db?.run(recipeFilteredTable.update(recipeName <- recipe.name, recipeImgURL <- recipe.imageURL, recipeIngredients <- recipe.ingredients, recipeSteps <- recipe.steps, recipePrepTime <- recipe.prepTime))
+            return true
+        } catch {
+            return false
+        }
+    }
+    
     func getRecipeList(recipeTypeID: Int64) -> [Recipe] {
         var recipeArr = [Recipe]()
         do {

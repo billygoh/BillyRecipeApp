@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
         recipeTypePV.dataSource = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         recipeType = localDB.getRecipeType(recipeTypeID: Int64(selectedRecipeTypeID))
         if let rt = recipeType {
             self.navigationItem.title = rt.name
@@ -65,7 +65,7 @@ class HomeViewController: UIViewController {
     
     @objc func addBtnClicked() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddUpdateRecipeVC") as! AddUpdateRecipeViewController
-        vc.barTitle = "Add Recipe"
+        vc.isEditingRecipe = false
         vc.currentRecipeTypeID = selectedRecipeTypeID
         self.navigationController?.pushViewController(vc, animated: true)
     }

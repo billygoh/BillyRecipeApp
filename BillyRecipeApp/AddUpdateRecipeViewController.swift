@@ -14,23 +14,48 @@ class AddUpdateRecipeViewController: UIViewController {
     @IBOutlet weak var recipeIV: UIImageView!
     @IBOutlet weak var recipeStepsTV: UITextView!
     @IBOutlet weak var recipePrepTimeTF: UITextField!
+    @IBOutlet weak var recipeIngredientTV: UITextView!
+    @IBOutlet weak var contentSV: UIScrollView!
     
-    var barTitle: String = ""
+    var isEditingRecipe: Bool = false
+    var recipe: Recipe? = nil
     var selectedImageUpload: UIImage?
     var currentRecipeTypeID: Int = 0
     
     let localDB = LocalDB()
+    let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationItem.title = barTitle
-        recipeStepsTV.text = "Steps"
-        recipeStepsTV.textColor = UIColor.lightGray
         recipeStepsTV.delegate = self
+        recipeStepsTV.tag = 1
+        recipeIngredientTV.delegate = self
+        recipeIngredientTV.tag = 2
         recipeNameTF.delegate = self
         recipePrepTimeTF.delegate = self
+        
+        if !isEditingRecipe {
+            self.navigationItem.title = "Add Recipe"
+            recipeStepsTV.text = "Steps"
+            recipeIngredientTV.text = "Ingredients"
+            recipeIngredientTV.textColor = UIColor.lightGray
+            recipeStepsTV.textColor = UIColor.lightGray
+            recipeIV.contentMode = .center
+        } else {
+            self.navigationItem.title = "Edit Recipe"
+            recipeIngredientTV.textColor = UIColor.black
+            recipeStepsTV.textColor = UIColor.black
+            recipeIV.contentMode = .scaleAspectFill
+            if let rp = recipe {
+                recipeNameTF.text = rp.name
+                recipeIngredientTV.text = rp.ingredients
+                recipeStepsTV.text = rp.steps
+                recipePrepTimeTF.text = rp.prepTime
+                recipeIV.image = UIImage(contentsOfFile: "\(documentPath)/\(rp.imageURL)")
+            }
+        }
         
         let imageviewTap = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
         recipeIV.isUserInteractionEnabled = true
@@ -43,6 +68,9 @@ class AddUpdateRecipeViewController: UIViewController {
         let saveItem = UIBarButtonItem(customView: saveBtn)
         
         self.navigationItem.rightBarButtonItem = saveItem
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func saveBtnClicked() {
@@ -56,34 +84,50 @@ class AddUpdateRecipeViewController: UIViewController {
     func saveDetails() {
         let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
 
-        if let recipeName = recipeNameTF.text, let img = selectedImageUpload, let prepTime = recipePrepTimeTF.text, let steps = recipeStepsTV.text {
+        if let recipeName = recipeNameTF.text, let prepTime = recipePrepTimeTF.text, let steps = recipeStepsTV.text, let ingredients = recipeIngredientTV.text {
             var imageFileName = ""
-            guard let imgData = img.jpegData(compressionQuality: 1.0) else {
-                print("image data error")
-                return
+            if let img = selectedImageUpload {
+                guard let imgData = img.jpegData(compressionQuality: 1.0) else {
+                    print("image data error")
+                    return
+                }
+                
+                do {
+                    let date = Date()
+                    let format = DateFormatter()
+                    format.dateFormat = "yyyyMMddHHmmss"
+                    let formattedDate = format.string(from: date)
+                    imageFileName = "\(formattedDate).jpg"
+                    try imgData.write(to: URL(fileURLWithPath: "\(documentPath)/\(imageFileName)"))
+                } catch {
+                    return
+                }
             }
             
-            do {
-                let date = Date()
-                let format = DateFormatter()
-                format.dateFormat = "yyyyMMddHHmmss"
-                let formattedDate = format.string(from: date)
-                imageFileName = "\(formattedDate).jpg"
-                try imgData.write(to: URL(fileURLWithPath: "\(documentPath)/\(imageFileName)"))
-            } catch {
-                return
-            }
+            var success = false
+            var successMsg = ""
             
-            let success = localDB.addRecipe(recipeArr: [Recipe(id: 0, name: recipeName, imageURL: imageFileName, ingredients: "", steps: steps, prepTime: prepTime)], recipeTypeID: Int64(currentRecipeTypeID))
+            if !isEditingRecipe {
+                success = localDB.addRecipe(recipeArr: [Recipe(id: 0, name: recipeName, imageURL: imageFileName, ingredients: ingredients, steps: steps, prepTime: prepTime)], recipeTypeID: Int64(currentRecipeTypeID))
+                successMsg = "Successfully added recipe!"
+            } else {
+                if let rp = recipe {
+                    if imageFileName == "" {
+                        imageFileName = rp.imageURL
+                    }
+                    success = localDB.editRecipe(recipe: Recipe(id: rp.id, name: recipeName, imageURL: imageFileName, ingredients: ingredients, steps: steps, prepTime: prepTime))
+                    successMsg = "Successfully updated recipe!"
+                }
+            }
             
             if success {
-                let alert = UIAlertController(title: "Success", message: "Successfully added recipe!", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Success", message: successMsg, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
                     self.navigationController?.popViewController(animated: true)
                 }))
                 self.present(alert, animated: true, completion: nil)
             } else {
-                let alert = UIAlertController(title: "Error", message: "There are problems adding recipe", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Error", message: "There are problems occured", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
@@ -139,6 +183,21 @@ class AddUpdateRecipeViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
+    
+    @objc func keyboardWillShow(notification:NSNotification){
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = contentSV.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        contentSV.contentInset = contentInset
+    }
+    
+    @objc func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        contentSV.contentInset = contentInset
+    }
 }
 
 extension AddUpdateRecipeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -154,16 +213,30 @@ extension AddUpdateRecipeViewController: UIImagePickerControllerDelegate, UINavi
 
 extension AddUpdateRecipeViewController: UITextViewDelegate, UITextFieldDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == "Steps" {
-            textView.text = ""
-            textView.textColor = UIColor.black
+        if textView.tag == 1 {
+            if textView.text == "Steps" {
+                textView.text = ""
+                textView.textColor = UIColor.black
+            }
+        } else if textView.tag == 2 {
+            if textView.text == "Ingredients" {
+                textView.text = ""
+                textView.textColor = UIColor.black
+            }
         }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text == "" {
-            textView.text = "Steps"
-            textView.textColor = UIColor.lightGray
+        if textView.tag == 1 {
+            if textView.text == "" {
+                textView.text = "Steps"
+                textView.textColor = UIColor.lightGray
+            }
+        } else if textView.tag == 2 {
+            if textView.text == "" {
+                textView.text = "Ingredients"
+                textView.textColor = UIColor.lightGray
+            }
         }
     }
     

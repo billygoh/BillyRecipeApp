@@ -17,6 +17,7 @@ class RecipeDetailsViewController: UIViewController {
     
     var currentRecipeTypeID: Int = 0
     var recipeID: Int = 0
+    var recipe: Recipe? = nil
     let localDB = LocalDB()
     let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
     
@@ -24,8 +25,6 @@ class RecipeDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        loadRecipe()
-        
         let editBtn = UIButton(type: .custom)
         editBtn.setImage(UIImage(named: "edit"), for: .normal)
         editBtn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
@@ -34,21 +33,29 @@ class RecipeDetailsViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = editItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadRecipe()
+    }
 
     func loadRecipe() {
-        if let recipe = localDB.getRecipeDetails(recipeID: Int64(recipeID)) {
-            self.navigationItem.title = recipe.name
-            recipeIV.image = UIImage(contentsOfFile: "\(documentPath)/\(recipe.imageURL)")
-            prepTimeLbl.text = "Prep Time: \(recipe.prepTime)"
-            ingredientLbl.text = recipe.ingredients
-            stepsLbl.text = recipe.steps
+        recipe = localDB.getRecipeDetails(recipeID: Int64(recipeID))
+        if let rp = recipe {
+            self.navigationItem.title = rp.name
+            recipeIV.image = UIImage(contentsOfFile: "\(documentPath)/\(rp.imageURL)")
+            prepTimeLbl.text = "Prep Time: \(rp.prepTime)"
+            ingredientLbl.text = rp.ingredients
+            stepsLbl.text = rp.steps
         }
     }
     
     @objc func editBtnClicked() {
         let alert = UIAlertController(title: "Select your action", message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Edit", style: .default, handler: { _ in
-            
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddUpdateRecipeVC") as! AddUpdateRecipeViewController
+            vc.isEditingRecipe = true
+            vc.recipe = self.recipe
+            self.navigationController?.pushViewController(vc, animated: true)
         }))
         
         alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
