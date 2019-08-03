@@ -74,30 +74,30 @@ class ViewController: UIViewController {
             addImageToDocumentPath(imageFileName: "burrito.jpg")
             addImageToDocumentPath(imageFileName: "quesaddila.jpg")
             addImageToDocumentPath(imageFileName: "taco.jpg")
-            recipeArr += [Recipe(id: 0, name: "Burrito", imageURL: "burrito.jpg", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Quesaddila", imageURL: "quesaddila.jpg", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Taco", imageURL: "taco.jpg", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Burrito", imageURL: "burrito.jpg", ingredients: "123", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Quesaddila", imageURL: "quesaddila.jpg", ingredients: "123", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Taco", imageURL: "taco.jpg", ingredients: "123", steps: "step 123", prepTime: "prep 123")]
         case 2:
             addImageToDocumentPath(imageFileName: "aglioolio.jpg")
             addImageToDocumentPath(imageFileName: "pizza.jpg")
             addImageToDocumentPath(imageFileName: "carbonara.jpg")
-            recipeArr += [Recipe(id: 0, name: "Aglio Olio", imageURL: "aglioolio.jpg", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Pizza", imageURL: "pizza.jpg", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Carbonara", imageURL: "carbonara.jpg", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Aglio Olio", imageURL: "aglioolio.jpg", ingredients: "123", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Pizza", imageURL: "pizza.jpg", ingredients: "123", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Carbonara", imageURL: "carbonara.jpg", ingredients: "123", steps: "step 123", prepTime: "prep 123")]
         case 3:
             addImageToDocumentPath(imageFileName: "sushi.jpg")
             addImageToDocumentPath(imageFileName: "soba.jpg")
             addImageToDocumentPath(imageFileName: "udon.jpg")
-            recipeArr += [Recipe(id: 0, name: "Sushi", imageURL: "sushi.jpg", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Soba", imageURL: "soba.jpg", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Udon", imageURL: "udon.jpg", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Sushi", imageURL: "sushi.jpg", ingredients: "123", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Soba", imageURL: "soba.jpg", ingredients: "123", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Udon", imageURL: "udon.jpg", ingredients: "123", steps: "step 123", prepTime: "prep 123")]
         case 4:
             addImageToDocumentPath(imageFileName: "kimchi.jpg")
             addImageToDocumentPath(imageFileName: "friedchicken.jpg")
             addImageToDocumentPath(imageFileName: "bibimbap.jpg")
-            recipeArr += [Recipe(id: 0, name: "Kimchi", imageURL: "kimchi.jpg", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Korean Fried Chicken", imageURL: "friedchicken.jpg", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Bibimbap", imageURL: "bibimbap.jpg", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Kimchi", imageURL: "kimchi.jpg", ingredients: "123", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Korean Fried Chicken", imageURL: "friedchicken.jpg", ingredients: "123", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Bibimbap", imageURL: "bibimbap.jpg", ingredients: "123", steps: "step 123", prepTime: "prep 123")]
         default:
             return
         }

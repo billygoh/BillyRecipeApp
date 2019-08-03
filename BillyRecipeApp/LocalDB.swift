@@ -21,6 +21,7 @@ class LocalDB {
     let recipeTypeId = Expression<Int64>("recipeTypeId")
     let recipeName = Expression<String>("name")
     let recipeImgURL = Expression<String>("imageURL")
+    let recipeIngredients = Expression<String>("ingredients")
     let recipeSteps = Expression<String>("steps")
     let recipePrepTime = Expression<String>("prepTime")
     
@@ -38,6 +39,7 @@ class LocalDB {
                 t.column(recipeTypeId)
                 t.column(recipeName)
                 t.column(recipeImgURL)
+                t.column(recipeIngredients)
                 t.column(recipeSteps)
                 t.column(recipePrepTime)
             })
@@ -90,7 +92,7 @@ class LocalDB {
         do {
             if recipeArr.count > 0 {
                 for recipe in recipeArr {
-                    try db?.run(recipeTable.insert(recipeTypeId <- recipeTypeID, recipeName <- recipe.name, recipeImgURL <- recipe.imageURL, recipeSteps <- recipe.steps, recipePrepTime <- recipe.prepTime))
+                    try db?.run(recipeTable.insert(recipeTypeId <- recipeTypeID, recipeName <- recipe.name, recipeImgURL <- recipe.imageURL, recipeIngredients <- recipe.ingredients, recipeSteps <- recipe.steps, recipePrepTime <- recipe.prepTime))
                 }
                 return true
             }
@@ -105,12 +107,26 @@ class LocalDB {
         do {
             let recipeFilteredTable = recipeTable.filter(recipeTypeId == recipeTypeID)
             for r in try (db?.prepare(recipeFilteredTable))! {
-                recipeArr += [Recipe(id: Int(r[recipeId]), name: r[recipeName], imageURL: r[recipeImgURL], steps: r[recipeSteps], prepTime: r[recipePrepTime])]
+                recipeArr += [Recipe(id: Int(r[recipeId]), name: r[recipeName], imageURL: r[recipeImgURL], ingredients: r[recipeIngredients] , steps: r[recipeSteps], prepTime: r[recipePrepTime])]
             }
             
             return recipeArr
         } catch {
             return recipeArr
+        }
+    }
+    
+    func getRecipeDetails(recipeID: Int64) -> Recipe? {
+        do {
+            var recipe: Recipe? = nil
+            let recipeFilteredTable = recipeTable.filter(id == recipeID)
+            
+            for r in try (db?.prepare(recipeFilteredTable))! {
+                recipe = Recipe(id: Int(r[recipeId]), name: r[recipeName], imageURL: r[recipeImgURL], ingredients: r[recipeIngredients] , steps: r[recipeSteps], prepTime: r[recipePrepTime])
+            }
+            return recipe
+        } catch {
+            return nil
         }
     }
 }

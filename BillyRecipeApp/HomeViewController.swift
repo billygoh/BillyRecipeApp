@@ -119,6 +119,13 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         return CGSize(width: size, height: size)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecipeDetailsVC") as! RecipeDetailsViewController
+        vc.currentRecipeTypeID = selectedRecipeTypeID
+        vc.recipeID = recipeArr[indexPath.row].id
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension HomeViewController: UIPickerViewDelegate, UIPickerViewDataSource {

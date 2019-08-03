@@ -38,6 +38,8 @@
 		28E13D5A22F5644C00A4172E /* aglioolio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D4E22F5644C00A4172E /* aglioolio.jpg */; };
 		28E13D5B22F5644C00A4172E /* burrito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D4F22F5644C00A4172E /* burrito.jpg */; };
 		28E13D5C22F5644C00A4172E /* bibimbap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D5022F5644C00A4172E /* bibimbap.jpg */; };
+		28E13D5E22F5713B00A4172E /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E13D5D22F5713B00A4172E /* RecipeDetailsViewController.swift */; };
+		28E13D6022F578D800A4172E /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D5F22F578D800A4172E /* edit.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +166,8 @@
 		28E13D4E22F5644C00A4172E /* aglioolio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aglioolio.jpg; sourceTree = "<group>"; };
 		28E13D4F22F5644C00A4172E /* burrito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burrito.jpg; sourceTree = "<group>"; };
 		28E13D5022F5644C00A4172E /* bibimbap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bibimbap.jpg; sourceTree = "<group>"; };
+		28E13D5D22F5713B00A4172E /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		28E13D5F22F578D800A4172E /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +228,7 @@
 				2877DA3822F4738C0026AA4E /* HomeViewController.swift */,
 				2877DA5C22F49C560026AA4E /* RecipeCollectionViewCell.swift */,
 				2877DA6222F4AF8D0026AA4E /* AddUpdateRecipeViewController.swift */,
+				28E13D5D22F5713B00A4172E /* RecipeDetailsViewController.swift */,
 				2877DA3622F471510026AA4E /* Recipe.swift */,
 				2877DA5A22F478C60026AA4E /* LocalDB.swift */,
 				2877DA0622F46C140026AA4E /* Main.storyboard */,
@@ -279,6 +284,7 @@
 				2877DA6022F4AA7F0026AA4E /* add.png */,
 				2877DA6422F4B57B0026AA4E /* image.png */,
 				2877DA6622F4BBD90026AA4E /* ok.png */,
+				28E13D5F22F578D800A4172E /* edit.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -482,6 +488,7 @@
 				28E13D5122F5644C00A4172E /* pizza.jpg in Resources */,
 				28E13D5322F5644C00A4172E /* friedchicken.jpg in Resources */,
 				2877DA6522F4B57B0026AA4E /* image.png in Resources */,
+				28E13D6022F578D800A4172E /* edit.png in Resources */,
 				2877DA0822F46C140026AA4E /* Main.storyboard in Resources */,
 				28E13D5922F5644C00A4172E /* udon.jpg in Resources */,
 				28E13D5A22F5644C00A4172E /* aglioolio.jpg in Resources */,
@@ -515,6 +522,7 @@
 				2877DA5D22F49C560026AA4E /* RecipeCollectionViewCell.swift in Sources */,
 				2877DA5B22F478C60026AA4E /* LocalDB.swift in Sources */,
 				2877DA6322F4AF8D0026AA4E /* AddUpdateRecipeViewController.swift in Sources */,
+				28E13D5E22F5713B00A4172E /* RecipeDetailsViewController.swift in Sources */,
 				2877DA0522F46C140026AA4E /* ViewController.swift in Sources */,
 				2877DA0322F46C140026AA4E /* AppDelegate.swift in Sources */,
 				2877DA3722F471510026AA4E /* Recipe.swift in Sources */,

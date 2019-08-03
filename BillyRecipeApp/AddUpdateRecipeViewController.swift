@@ -74,7 +74,7 @@ class AddUpdateRecipeViewController: UIViewController {
                 return
             }
             
-            let success = localDB.addRecipe(recipeArr: [Recipe(id: 0, name: recipeName, imageURL: imageFileName, steps: steps, prepTime: prepTime)], recipeTypeID: Int64(currentRecipeTypeID))
+            let success = localDB.addRecipe(recipeArr: [Recipe(id: 0, name: recipeName, imageURL: imageFileName, ingredients: "", steps: steps, prepTime: prepTime)], recipeTypeID: Int64(currentRecipeTypeID))
             
             if success {
                 let alert = UIAlertController(title: "Success", message: "Successfully added recipe!", preferredStyle: .alert)
