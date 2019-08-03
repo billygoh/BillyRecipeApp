@@ -87,6 +87,7 @@ class HomeViewController: UIViewController {
         }
         
         selectedRecipeTypeID = pickerSelectedRecipeTypeID
+        UserDefaults.standard.set(selectedRecipeTypeID, forKey: "selectedRecipeTypeID")
         self.navigationItem.title = pickerSelectedRecipeTypeName
         recipeArr = localDB.getRecipeList(recipeTypeID: Int64(selectedRecipeTypeID))
         recipeCV.reloadData()
