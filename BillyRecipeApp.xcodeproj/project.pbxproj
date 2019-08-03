@@ -26,6 +26,18 @@
 		2877DA6322F4AF8D0026AA4E /* AddUpdateRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA6222F4AF8D0026AA4E /* AddUpdateRecipeViewController.swift */; };
 		2877DA6522F4B57B0026AA4E /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 2877DA6422F4B57B0026AA4E /* image.png */; };
 		2877DA6722F4BBD90026AA4E /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 2877DA6622F4BBD90026AA4E /* ok.png */; };
+		28E13D5122F5644C00A4172E /* pizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D3F22F5644C00A4172E /* pizza.jpg */; };
+		28E13D5222F5644C00A4172E /* quesaddila.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D4622F5644C00A4172E /* quesaddila.jpg */; };
+		28E13D5322F5644C00A4172E /* friedchicken.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D4722F5644C00A4172E /* friedchicken.jpg */; };
+		28E13D5422F5644C00A4172E /* kimchi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D4822F5644C00A4172E /* kimchi.jpg */; };
+		28E13D5522F5644C00A4172E /* soba.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D4922F5644C00A4172E /* soba.jpg */; };
+		28E13D5622F5644C00A4172E /* carbonara.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D4A22F5644C00A4172E /* carbonara.jpg */; };
+		28E13D5722F5644C00A4172E /* sushi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D4B22F5644C00A4172E /* sushi.jpg */; };
+		28E13D5822F5644C00A4172E /* taco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D4C22F5644C00A4172E /* taco.jpg */; };
+		28E13D5922F5644C00A4172E /* udon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D4D22F5644C00A4172E /* udon.jpg */; };
+		28E13D5A22F5644C00A4172E /* aglioolio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D4E22F5644C00A4172E /* aglioolio.jpg */; };
+		28E13D5B22F5644C00A4172E /* burrito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D4F22F5644C00A4172E /* burrito.jpg */; };
+		28E13D5C22F5644C00A4172E /* bibimbap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D5022F5644C00A4172E /* bibimbap.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +152,18 @@
 		2877DA6222F4AF8D0026AA4E /* AddUpdateRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateRecipeViewController.swift; sourceTree = "<group>"; };
 		2877DA6422F4B57B0026AA4E /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		2877DA6622F4BBD90026AA4E /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
+		28E13D3F22F5644C00A4172E /* pizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pizza.jpg; sourceTree = "<group>"; };
+		28E13D4622F5644C00A4172E /* quesaddila.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = quesaddila.jpg; sourceTree = "<group>"; };
+		28E13D4722F5644C00A4172E /* friedchicken.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = friedchicken.jpg; sourceTree = "<group>"; };
+		28E13D4822F5644C00A4172E /* kimchi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kimchi.jpg; sourceTree = "<group>"; };
+		28E13D4922F5644C00A4172E /* soba.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soba.jpg; sourceTree = "<group>"; };
+		28E13D4A22F5644C00A4172E /* carbonara.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carbonara.jpg; sourceTree = "<group>"; };
+		28E13D4B22F5644C00A4172E /* sushi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sushi.jpg; sourceTree = "<group>"; };
+		28E13D4C22F5644C00A4172E /* taco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = taco.jpg; sourceTree = "<group>"; };
+		28E13D4D22F5644C00A4172E /* udon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = udon.jpg; sourceTree = "<group>"; };
+		28E13D4E22F5644C00A4172E /* aglioolio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aglioolio.jpg; sourceTree = "<group>"; };
+		28E13D4F22F5644C00A4172E /* burrito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burrito.jpg; sourceTree = "<group>"; };
+		28E13D5022F5644C00A4172E /* bibimbap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bibimbap.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +263,18 @@
 		2877DA3322F46DA50026AA4E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				28E13D4E22F5644C00A4172E /* aglioolio.jpg */,
+				28E13D5022F5644C00A4172E /* bibimbap.jpg */,
+				28E13D4F22F5644C00A4172E /* burrito.jpg */,
+				28E13D4A22F5644C00A4172E /* carbonara.jpg */,
+				28E13D4722F5644C00A4172E /* friedchicken.jpg */,
+				28E13D4822F5644C00A4172E /* kimchi.jpg */,
+				28E13D3F22F5644C00A4172E /* pizza.jpg */,
+				28E13D4622F5644C00A4172E /* quesaddila.jpg */,
+				28E13D4922F5644C00A4172E /* soba.jpg */,
+				28E13D4B22F5644C00A4172E /* sushi.jpg */,
+				28E13D4C22F5644C00A4172E /* taco.jpg */,
+				28E13D4D22F5644C00A4172E /* udon.jpg */,
 				2877DA5E22F4AA7B0026AA4E /* filter.png */,
 				2877DA6022F4AA7F0026AA4E /* add.png */,
 				2877DA6422F4B57B0026AA4E /* image.png */,
@@ -432,13 +468,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28E13D5222F5644C00A4172E /* quesaddila.jpg in Resources */,
 				2877DA0D22F46C140026AA4E /* LaunchScreen.storyboard in Resources */,
 				2877DA0A22F46C140026AA4E /* Assets.xcassets in Resources */,
 				2877DA5F22F4AA7B0026AA4E /* filter.png in Resources */,
+				28E13D5722F5644C00A4172E /* sushi.jpg in Resources */,
 				2877DA6722F4BBD90026AA4E /* ok.png in Resources */,
+				28E13D5B22F5644C00A4172E /* burrito.jpg in Resources */,
+				28E13D5622F5644C00A4172E /* carbonara.jpg in Resources */,
 				2877DA6122F4AA7F0026AA4E /* add.png in Resources */,
+				28E13D5422F5644C00A4172E /* kimchi.jpg in Resources */,
+				28E13D5522F5644C00A4172E /* soba.jpg in Resources */,
+				28E13D5122F5644C00A4172E /* pizza.jpg in Resources */,
+				28E13D5322F5644C00A4172E /* friedchicken.jpg in Resources */,
 				2877DA6522F4B57B0026AA4E /* image.png in Resources */,
 				2877DA0822F46C140026AA4E /* Main.storyboard in Resources */,
+				28E13D5922F5644C00A4172E /* udon.jpg in Resources */,
+				28E13D5A22F5644C00A4172E /* aglioolio.jpg in Resources */,
+				28E13D5C22F5644C00A4172E /* bibimbap.jpg in Resources */,
+				28E13D5822F5644C00A4172E /* taco.jpg in Resources */,
 				2877DA3522F470CD0026AA4E /* recipetypes.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

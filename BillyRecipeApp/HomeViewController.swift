@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
     let localDB = LocalDB()
     
     var recipeArr = [Recipe]()
+    let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,14 +87,37 @@ class HomeViewController: UIViewController {
     
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recipeArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipeCollectionViewCell
+        cell.recipeIV.image = UIImage(contentsOfFile: "\(documentPath)/\(recipeArr[indexPath.row].imageURL)")
+        cell.recipeNameLbl.text = recipeArr[indexPath.row].name
+        
+        cell.contentView.layer.cornerRadius = 6.0
+        cell.contentView.layer.borderWidth = 1.0
+        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        cell.contentView.layer.masksToBounds = true
+        
+        cell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 1.2)
+        cell.layer.shadowRadius = 3.0
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+        cell.layer.backgroundColor = UIColor.clear.cgColor
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        let padding: CGFloat = 20
+        let size = (collectionView.frame.size.width - padding)/2
+        
+        return CGSize(width: size, height: size)
     }
 }
 

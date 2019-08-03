@@ -68,28 +68,57 @@ class ViewController: UIViewController {
     
     func preAddData(recipeTypeID: Int64) {
         var recipeArr = [Recipe]()
+        
         switch recipeTypeID {
         case 1:
-            recipeArr += [Recipe(id: 0, name: "Burrito", imageURL: "KR Img 1", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Quesaddila", imageURL: "KR Img 2", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Taco", imageURL: "KR Img 3", steps: "step 123", prepTime: "prep 123")]
+            addImageToDocumentPath(imageFileName: "burrito.jpg")
+            addImageToDocumentPath(imageFileName: "quesaddila.jpg")
+            addImageToDocumentPath(imageFileName: "taco.jpg")
+            recipeArr += [Recipe(id: 0, name: "Burrito", imageURL: "burrito.jpg", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Quesaddila", imageURL: "quesaddila.jpg", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Taco", imageURL: "taco.jpg", steps: "step 123", prepTime: "prep 123")]
         case 2:
-            recipeArr += [Recipe(id: 0, name: "Aglio Olio", imageURL: "KR Img 1", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Pizza", imageURL: "KR Img 2", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Cabonara", imageURL: "KR Img 3", steps: "step 123", prepTime: "prep 123")]
+            addImageToDocumentPath(imageFileName: "aglioolio.jpg")
+            addImageToDocumentPath(imageFileName: "pizza.jpg")
+            addImageToDocumentPath(imageFileName: "carbonara.jpg")
+            recipeArr += [Recipe(id: 0, name: "Aglio Olio", imageURL: "aglioolio.jpg", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Pizza", imageURL: "pizza.jpg", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Carbonara", imageURL: "carbonara.jpg", steps: "step 123", prepTime: "prep 123")]
         case 3:
-            recipeArr += [Recipe(id: 0, name: "Sushi", imageURL: "KR Img 1", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Soba", imageURL: "KR Img 2", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Udon", imageURL: "KR Img 3", steps: "step 123", prepTime: "prep 123")]
+            addImageToDocumentPath(imageFileName: "sushi.jpg")
+            addImageToDocumentPath(imageFileName: "soba.jpg")
+            addImageToDocumentPath(imageFileName: "udon.jpg")
+            recipeArr += [Recipe(id: 0, name: "Sushi", imageURL: "sushi.jpg", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Soba", imageURL: "soba.jpg", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Udon", imageURL: "udon.jpg", steps: "step 123", prepTime: "prep 123")]
         case 4:
-            recipeArr += [Recipe(id: 0, name: "Kimchi", imageURL: "KR Img 1", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Korean Fried Chicken", imageURL: "KR Img 2", steps: "step 123", prepTime: "prep 123")]
-            recipeArr += [Recipe(id: 0, name: "Bibimbap", imageURL: "KR Img 3", steps: "step 123", prepTime: "prep 123")]
+            addImageToDocumentPath(imageFileName: "kimchi.jpg")
+            addImageToDocumentPath(imageFileName: "friedchicken.jpg")
+            addImageToDocumentPath(imageFileName: "bibimbap.jpg")
+            recipeArr += [Recipe(id: 0, name: "Kimchi", imageURL: "kimchi.jpg", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Korean Fried Chicken", imageURL: "friedchicken.jpg", steps: "step 123", prepTime: "prep 123")]
+            recipeArr += [Recipe(id: 0, name: "Bibimbap", imageURL: "bibimbap.jpg", steps: "step 123", prepTime: "prep 123")]
         default:
             return
         }
 
         let _ = localDB.addRecipe(recipeArr: recipeArr, recipeTypeID: recipeTypeID)
+    }
+    
+    func addImageToDocumentPath(imageFileName: String) {
+        let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        if let img = UIImage(named: imageFileName) {
+            guard let imgData = img.jpegData(compressionQuality: 1.0) else {
+                print("image data error")
+                return
+            }
+            
+            do {
+                try imgData.write(to: URL(fileURLWithPath: "\(documentPath)/\(imageFileName)"))
+            } catch {
+                return
+            }
+        }
     }
 }
 

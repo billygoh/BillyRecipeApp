@@ -9,5 +9,7 @@
 import UIKit
 
 class RecipeCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var recipeIV: UIImageView!
+    @IBOutlet weak var recipeNameLbl: UILabel!
     
 }
