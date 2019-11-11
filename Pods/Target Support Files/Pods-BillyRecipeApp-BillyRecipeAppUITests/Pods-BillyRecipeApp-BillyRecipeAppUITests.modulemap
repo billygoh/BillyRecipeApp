@@ -1,0 +1,6 @@
+framework module Pods_BillyRecipeApp_BillyRecipeAppUITests {
+  umbrella header "Pods-BillyRecipeApp-BillyRecipeAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

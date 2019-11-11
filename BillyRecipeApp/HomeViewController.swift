@@ -21,7 +21,6 @@ class HomeViewController: UIViewController {
     let localDB = LocalDB()
     
     var recipeArr = [Recipe]()
-    let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,8 +101,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipeCollectionViewCell
-        cell.recipeIV.image = UIImage(contentsOfFile: "\(documentPath)/\(recipeArr[indexPath.row].imageURL)")
-        cell.recipeNameLbl.text = recipeArr[indexPath.row].name
+        let recipeViewModel = RecipeViewModel(recipe: recipeArr[indexPath.row])
+        cell.recipeIV.image = recipeViewModel.recipeImage
+        cell.recipeNameLbl.text = recipeViewModel.recipeName
         
         cell.contentView.layer.cornerRadius = 6.0
         cell.contentView.layer.borderWidth = 1.0

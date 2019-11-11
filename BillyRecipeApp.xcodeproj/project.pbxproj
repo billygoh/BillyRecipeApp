@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05125F2EEBBD5DF8E3986D6B /* Pods_BillyRecipeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3F47C39B7704221FD50AD3 /* Pods_BillyRecipeApp.framework */; };
+		2801BC6323028956006FE109 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2801BC6223028956006FE109 /* RecipeViewModel.swift */; };
 		2877DA0322F46C140026AA4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA0222F46C140026AA4E /* AppDelegate.swift */; };
 		2877DA0522F46C140026AA4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA0422F46C140026AA4E /* ViewController.swift */; };
 		2877DA0822F46C140026AA4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2877DA0622F46C140026AA4E /* Main.storyboard */; };
@@ -17,8 +19,6 @@
 		2877DA3522F470CD0026AA4E /* recipetypes.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2877DA3422F470CD0026AA4E /* recipetypes.xml */; };
 		2877DA3722F471510026AA4E /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA3622F471510026AA4E /* Recipe.swift */; };
 		2877DA3922F4738C0026AA4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA3822F4738C0026AA4E /* HomeViewController.swift */; };
-		2877DA5422F477D80026AA4E /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2877DA4522F477A70026AA4E /* SQLite.framework */; };
-		2877DA5622F477FB0026AA4E /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2877DA4522F477A70026AA4E /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2877DA5B22F478C60026AA4E /* LocalDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA5A22F478C60026AA4E /* LocalDB.swift */; };
 		2877DA5D22F49C560026AA4E /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2877DA5C22F49C560026AA4E /* RecipeCollectionViewCell.swift */; };
 		2877DA5F22F4AA7B0026AA4E /* filter.png in Resources */ = {isa = PBXBuildFile; fileRef = 2877DA5E22F4AA7B0026AA4E /* filter.png */; };
@@ -40,6 +40,8 @@
 		28E13D5C22F5644C00A4172E /* bibimbap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D5022F5644C00A4172E /* bibimbap.jpg */; };
 		28E13D5E22F5713B00A4172E /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E13D5D22F5713B00A4172E /* RecipeDetailsViewController.swift */; };
 		28E13D6022F578D800A4172E /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E13D5F22F578D800A4172E /* edit.png */; };
+		5EB627DE16CD2075006FA612 /* Pods_BillyRecipeApp_BillyRecipeAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9CBBB01039DE506ED8D8F75 /* Pods_BillyRecipeApp_BillyRecipeAppUITests.framework */; };
+		9CD85AC9405434A3B07045A5 /* Pods_BillyRecipeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BF30B83FACF29BB45B58F1 /* Pods_BillyRecipeAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,30 +108,11 @@
 			remoteGlobalIDString = A121AC451CA35C79005A31D1;
 			remoteInfo = "SQLite watchOS";
 		};
-		2877DA5722F477FB0026AA4E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2877DA3A22F477A70026AA4E /* SQLite.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = EE247AD21C3F04ED00AE3E12;
-			remoteInfo = "SQLite iOS";
-		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		2877DA5922F477FC0026AA4E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2877DA5622F477FB0026AA4E /* SQLite.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		181038143E90C592E78C94F3 /* Pods-BillyRecipeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillyRecipeAppTests.release.xcconfig"; path = "Target Support Files/Pods-BillyRecipeAppTests/Pods-BillyRecipeAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		2801BC6223028956006FE109 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		2877D9FF22F46C140026AA4E /* BillyRecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillyRecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2877DA0222F46C140026AA4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2877DA0422F46C140026AA4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +151,14 @@
 		28E13D5022F5644C00A4172E /* bibimbap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bibimbap.jpg; sourceTree = "<group>"; };
 		28E13D5D22F5713B00A4172E /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		28E13D5F22F578D800A4172E /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
+		31BF30B83FACF29BB45B58F1 /* Pods_BillyRecipeAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BillyRecipeAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5136B6CE774F269460377ECA /* Pods-BillyRecipeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillyRecipeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-BillyRecipeAppTests/Pods-BillyRecipeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B602C36229DE3B0659877FB /* Pods-BillyRecipeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillyRecipeApp.debug.xcconfig"; path = "Target Support Files/Pods-BillyRecipeApp/Pods-BillyRecipeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		6D543E8C6FE26BBFB8D6F219 /* Pods-BillyRecipeApp-BillyRecipeAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillyRecipeApp-BillyRecipeAppUITests.release.xcconfig"; path = "Target Support Files/Pods-BillyRecipeApp-BillyRecipeAppUITests/Pods-BillyRecipeApp-BillyRecipeAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A9CBBB01039DE506ED8D8F75 /* Pods_BillyRecipeApp_BillyRecipeAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BillyRecipeApp_BillyRecipeAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD3F47C39B7704221FD50AD3 /* Pods_BillyRecipeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BillyRecipeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD2843A46C914C8CCAC30409 /* Pods-BillyRecipeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillyRecipeApp.release.xcconfig"; path = "Target Support Files/Pods-BillyRecipeApp/Pods-BillyRecipeApp.release.xcconfig"; sourceTree = "<group>"; };
+		EE1124A5ED365CA3555FF1DF /* Pods-BillyRecipeApp-BillyRecipeAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillyRecipeApp-BillyRecipeAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-BillyRecipeApp-BillyRecipeAppUITests/Pods-BillyRecipeApp-BillyRecipeAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2877DA5422F477D80026AA4E /* SQLite.framework in Frameworks */,
+				05125F2EEBBD5DF8E3986D6B /* Pods_BillyRecipeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD85AC9405434A3B07045A5 /* Pods_BillyRecipeAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB627DE16CD2075006FA612 /* Pods_BillyRecipeApp_BillyRecipeAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +198,7 @@
 				2877DA0022F46C140026AA4E /* Products */,
 				2877DA3A22F477A70026AA4E /* SQLite.xcodeproj */,
 				2877DA5222F477C90026AA4E /* Frameworks */,
+				50016B5BDE029C5C2F53619E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,6 +223,7 @@
 				2877DA5C22F49C560026AA4E /* RecipeCollectionViewCell.swift */,
 				2877DA6222F4AF8D0026AA4E /* AddUpdateRecipeViewController.swift */,
 				28E13D5D22F5713B00A4172E /* RecipeDetailsViewController.swift */,
+				2801BC6223028956006FE109 /* RecipeViewModel.swift */,
 				2877DA3622F471510026AA4E /* Recipe.swift */,
 				2877DA5A22F478C60026AA4E /* LocalDB.swift */,
 				2877DA0622F46C140026AA4E /* Main.storyboard */,
@@ -306,8 +301,25 @@
 		2877DA5222F477C90026AA4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD3F47C39B7704221FD50AD3 /* Pods_BillyRecipeApp.framework */,
+				A9CBBB01039DE506ED8D8F75 /* Pods_BillyRecipeApp_BillyRecipeAppUITests.framework */,
+				31BF30B83FACF29BB45B58F1 /* Pods_BillyRecipeAppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50016B5BDE029C5C2F53619E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B602C36229DE3B0659877FB /* Pods-BillyRecipeApp.debug.xcconfig */,
+				CD2843A46C914C8CCAC30409 /* Pods-BillyRecipeApp.release.xcconfig */,
+				EE1124A5ED365CA3555FF1DF /* Pods-BillyRecipeApp-BillyRecipeAppUITests.debug.xcconfig */,
+				6D543E8C6FE26BBFB8D6F219 /* Pods-BillyRecipeApp-BillyRecipeAppUITests.release.xcconfig */,
+				5136B6CE774F269460377ECA /* Pods-BillyRecipeAppTests.debug.xcconfig */,
+				181038143E90C592E78C94F3 /* Pods-BillyRecipeAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,15 +329,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2877DA2722F46C150026AA4E /* Build configuration list for PBXNativeTarget "BillyRecipeApp" */;
 			buildPhases = (
+				F54ABFC7E9F4C3442D8DD039 /* [CP] Check Pods Manifest.lock */,
 				2877D9FB22F46C140026AA4E /* Sources */,
 				2877D9FC22F46C140026AA4E /* Frameworks */,
 				2877D9FD22F46C140026AA4E /* Resources */,
-				2877DA5922F477FC0026AA4E /* Embed Frameworks */,
+				D622E068FF6A0A98C7A4C79E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2877DA5822F477FB0026AA4E /* PBXTargetDependency */,
 			);
 			name = BillyRecipeApp;
 			productName = BillyRecipeApp;
@@ -336,6 +348,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2877DA2A22F46C150026AA4E /* Build configuration list for PBXNativeTarget "BillyRecipeAppTests" */;
 			buildPhases = (
+				E7CC75AF21E158C52329D234 /* [CP] Check Pods Manifest.lock */,
 				2877DA0F22F46C150026AA4E /* Sources */,
 				2877DA1022F46C150026AA4E /* Frameworks */,
 				2877DA1122F46C150026AA4E /* Resources */,
@@ -354,9 +367,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2877DA2D22F46C150026AA4E /* Build configuration list for PBXNativeTarget "BillyRecipeAppUITests" */;
 			buildPhases = (
+				8608ABF99CD4FFCD22C526CD /* [CP] Check Pods Manifest.lock */,
 				2877DA1A22F46C150026AA4E /* Sources */,
 				2877DA1B22F46C150026AA4E /* Frameworks */,
 				2877DA1C22F46C150026AA4E /* Resources */,
+				119D62FB618EE230A19C845E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -514,12 +529,116 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		119D62FB618EE230A19C845E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BillyRecipeApp-BillyRecipeAppUITests/Pods-BillyRecipeApp-BillyRecipeAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BillyRecipeApp-BillyRecipeAppUITests/Pods-BillyRecipeApp-BillyRecipeAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BillyRecipeApp-BillyRecipeAppUITests/Pods-BillyRecipeApp-BillyRecipeAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8608ABF99CD4FFCD22C526CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BillyRecipeApp-BillyRecipeAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D622E068FF6A0A98C7A4C79E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BillyRecipeApp/Pods-BillyRecipeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BillyRecipeApp/Pods-BillyRecipeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BillyRecipeApp/Pods-BillyRecipeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7CC75AF21E158C52329D234 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BillyRecipeAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F54ABFC7E9F4C3442D8DD039 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BillyRecipeApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2877D9FB22F46C140026AA4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2877DA5D22F49C560026AA4E /* RecipeCollectionViewCell.swift in Sources */,
+				2801BC6323028956006FE109 /* RecipeViewModel.swift in Sources */,
 				2877DA5B22F478C60026AA4E /* LocalDB.swift in Sources */,
 				2877DA6322F4AF8D0026AA4E /* AddUpdateRecipeViewController.swift in Sources */,
 				28E13D5E22F5713B00A4172E /* RecipeDetailsViewController.swift in Sources */,
@@ -558,11 +677,6 @@
 			isa = PBXTargetDependency;
 			target = 2877D9FE22F46C140026AA4E /* BillyRecipeApp */;
 			targetProxy = 2877DA1F22F46C150026AA4E /* PBXContainerItemProxy */;
-		};
-		2877DA5822F477FB0026AA4E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SQLite iOS";
-			targetProxy = 2877DA5722F477FB0026AA4E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -704,8 +818,8 @@
 		};
 		2877DA2822F46C150026AA4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B602C36229DE3B0659877FB /* Pods-BillyRecipeApp.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6QL3YZ3ZT;
@@ -724,8 +838,8 @@
 		};
 		2877DA2922F46C150026AA4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD2843A46C914C8CCAC30409 /* Pods-BillyRecipeApp.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6QL3YZ3ZT;
@@ -744,6 +858,7 @@
 		};
 		2877DA2B22F46C150026AA4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5136B6CE774F269460377ECA /* Pods-BillyRecipeAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -765,6 +880,7 @@
 		};
 		2877DA2C22F46C150026AA4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 181038143E90C592E78C94F3 /* Pods-BillyRecipeAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -786,6 +902,7 @@
 		};
 		2877DA2E22F46C150026AA4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE1124A5ED365CA3555FF1DF /* Pods-BillyRecipeApp-BillyRecipeAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -806,6 +923,7 @@
 		};
 		2877DA2F22F46C150026AA4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D543E8C6FE26BBFB8D6F219 /* Pods-BillyRecipeApp-BillyRecipeAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
